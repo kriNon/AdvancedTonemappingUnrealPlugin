@@ -45,7 +45,7 @@
 #define USE_BEZOLD_BRUCKE_SHIFT 1
 #define BEZOLD_BRUCKE_BRUTE_FORCE 0
 #define BEZOLD_BRUCKE_SHIFT_RAMP 5
-#define USE_LONG_TAILED_CHROMA_ATTENUATION 1
+#define USE_LONG_TAILED_CHROMA_ATTENUATION 0
 #define CHROMA_ATTENUATION_BIAS 1.03
 
 // Based on the selection, define `linear_to_perceptual` and `perceptual_to_linear`
@@ -225,6 +225,7 @@ float3 display_transform_AP1(float3 input_stimulus) {
     input_stimulus = mul( AP1_2_sRGB, input_stimulus );
     float3 compressed_rgb = display_transform_sRGB(input_stimulus);
     compressed_rgb = mul( sRGB_2_AP1, compressed_rgb );
+
     return compressed_rgb;
 }
 
