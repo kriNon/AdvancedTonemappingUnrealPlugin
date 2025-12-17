@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0",
+	"VersionName": "2.0.0",
 	"FriendlyName": "AdvancedTonemapping",
 	"Description": "",
 	"Category": "Other",
@@ -18,12 +18,12 @@
 		{
 			"Name": "AdvancedTonemapping",
 			"Type": "Runtime",
-			"LoadingPhase": "PostConfigInit"
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
-			"Name": "UnrealShaderModLoader",
+			"Name": "OpenColorIO",
 			"Enabled": true
 		}
 	]

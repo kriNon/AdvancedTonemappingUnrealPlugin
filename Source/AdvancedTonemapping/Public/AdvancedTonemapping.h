@@ -2,13 +2,13 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
-class ADVANCEDTONEMAPPING_API FAdvancedTonemappingModule : public IModuleInterface
+class FAdvancedTonemappingModule : public IModuleInterface
 {
 public:
 
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
+	virtual void ShutdownModule() override;
 };
