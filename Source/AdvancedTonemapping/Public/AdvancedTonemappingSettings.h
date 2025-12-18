@@ -12,6 +12,7 @@ enum class ETonemapper : uint8
 {
 	ACES,
 	TonyMcMapface,
+	AgX,
 	MAX,
 };
 

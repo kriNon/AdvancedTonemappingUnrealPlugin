@@ -1,3 +1,6 @@
 [submodule "Tonemappers/tony-mc-mapface"]
 	path = Tonemappers/tony-mc-mapface
 	url = https://github.com/h3r2tic/tony-mc-mapface
+[submodule "Tonemappers/AgX"]
+	path = Tonemappers/AgX
+	url = https://github.com/sobotka/AgX
