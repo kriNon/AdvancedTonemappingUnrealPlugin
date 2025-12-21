@@ -7,15 +7,6 @@
 #include "OpenColorIOColorSpace.h"
 #include "AdvancedTonemappingSettings.generated.h"
 
-UENUM(BlueprintType)
-enum class ETonemapper : uint8
-{
-	ACES,
-	TonyMcMapface,
-	AgX,
-	MAX,
-};
-
 UCLASS(Config = Game, DefaultConfig, DisplayName = "AdvancedTonemapping")
 class ADVANCEDTONEMAPPING_API UAdvancedTonemappingSettings : public UDeveloperSettingsBackedByCVars
 {
@@ -25,16 +16,13 @@ public:
 	UPROPERTY(Config, EditAnywhere, Category = "AdvancedTonemapping", meta = (DisplayName = "Use custom tonemapper", ToolTip = "Use OCIO to replace the engine tonemapper"))
 	bool bUseCustomTonemapper = true;
 
-	UPROPERTY(Config, BlueprintReadOnly, EditAnywhere, Category = "AdvancedTonemapping", meta = (DisplayName = "TonemappingOperator", ToolTip = "Custom tonemapping operator to use"))
-	ETonemapper Tonemapper;
-
 	virtual FName GetContainerName() const override { return FName("Project"); };
 	virtual FName GetCategoryName() const override { return FName("Plugins"); };
 	virtual FName GetSectionName() const override { return FName("AdvancedTonemapping"); };
 
 	static UAdvancedTonemappingSettings& Get();
 
-	UPROPERTY(Config, EditAnywhere, BlueprintReadWrite, Category = "AdvancedTonemapping")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "AdvancedTonemapping")
 	FOpenColorIOColorConversionSettings ColorConversionSettings;
 
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;

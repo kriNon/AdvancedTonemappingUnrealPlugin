@@ -32,7 +32,7 @@ void UAdvancedTonemappingSubsystem::CreateDisplayExtension()
     }
 
     // If aces is selected, or settings is disabled, we skip the display extension
-    if (!Settings->bUseCustomTonemapper || Settings->Tonemapper == ETonemapper::ACES) {
+    if (!Settings->bUseCustomTonemapper) {
         return;
     }
 
