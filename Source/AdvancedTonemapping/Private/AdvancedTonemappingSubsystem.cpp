@@ -5,7 +5,10 @@
 #include "Misc/Optional.h"
 #include "OpenColorIO/Private/OpenColorIOModule.h"
 #include "OpenColorIODisplayManager.h"
+
+#if WITH_EDITOR
 #include "Editor.h"
+#endif
 
 void UAdvancedTonemappingSubsystem::MarkDirty()
 {

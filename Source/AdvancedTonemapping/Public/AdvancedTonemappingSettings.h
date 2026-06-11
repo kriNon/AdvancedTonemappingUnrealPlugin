@@ -25,5 +25,7 @@ public:
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "AdvancedTonemapping")
 	FOpenColorIOColorConversionSettings ColorConversionSettings;
 
+#if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
 };

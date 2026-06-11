@@ -12,6 +12,7 @@ UAdvancedTonemappingSettings& UAdvancedTonemappingSettings::Get()
 		return *MutableCDO;
 }
 
+#if WITH_EDITOR
 void UAdvancedTonemappingSettings::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
     Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -47,3 +48,4 @@ void UAdvancedTonemappingSettings::PostEditChangeProperty(FPropertyChangedEvent&
             });
     }
 }
+#endif
